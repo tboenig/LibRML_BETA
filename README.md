@@ -1,4 +1,4 @@
-# LibRML_BETA
+# LibRML_Beta
 
 Library Rights Machine-readable Language (kurz LibRML)
 
