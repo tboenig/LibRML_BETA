@@ -56,9 +56,24 @@ Das zentrale LibRML-Beta-Schema enthält:
 
 ## Einschränkungen
 
-Das Schema verwendet `xs:assert`, um logische Regeln und Einschränkungen auf Attribute und untergeordnete Elemente anzuwenden, wie:
+Das Schema (XSD-Version 1.1) verwendet `xs:assert`, um logische Regeln und Einschränkungen auf Attribute und untergeordnete Elemente anzuwenden, wie:
 - Verhinderung inkompatibler Kombinationen von Aktionen und Restriktionen.
 - Validierung spezifischer Szenarien basierend auf Attributen wie `type`, `date`, oder `age`.
+
+Damit ist das Schema bei der Formulierung von Instanzen "streng".
+
+Die Verwendung von XSD-Schema 1.1 hat Vor- und Nachteile:
+- Vorteil:
+  - einfache Formulierung von Präzisierungen, Abhängigkeiten und Verwendungen von Elementen und Attributen
+  - Formulierung in XPath
+ 
+- Nachteil:
+  - `xs:assert` erst ab der XSD-Version 1.1 verwendbar.
+  - Parser muss XSD-1.1 kompatibel sein.
+ 
+- Alternativen
+  - `xs:assert` in Schematronregeln umsetzen.
+  - Schematron aus dem XSD automatisiert erstellen.
 
 ## Verwendung
 
